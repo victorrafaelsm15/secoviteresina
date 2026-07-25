@@ -16,10 +16,10 @@ export default function AdminLoginPage() {
     try {
       await signIn(email, password);
       navigate('/admin');
-    } catch {
+    } catch (err) {
       notifications.show({
         title: 'Não foi possível entrar',
-        message: 'Verifique o e-mail e a senha informados.',
+        message: err.message || 'Verifique o e-mail e a senha informados.',
         color: 'red',
       });
     }
