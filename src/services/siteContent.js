@@ -3,14 +3,14 @@
 // Substitua os textos abaixo pelo conteúdo oficial definitivo quando disponível.
 
 export const siteInfo = {
-  name: 'SECOVI-THE — Sindicato dos Condomínios, Administradoras de Condomínios, Imobiliárias e Shopping Centers de Teresina-PI',
-  shortName: 'SECOVI-THE',
-  logoSubtitle: 'Teresina-PI',
-  phone: '(86) 98895-7734',
-  whatsapp: '(86) 98895-7734',
-  email: 'secretariasecovithe@gmail.com',
+  name: 'Sindicato dos Condomínios, Administradoras de Condomínios, Imobiliárias e Shopping Centers de Teresina-PI',
+  shortName: 'Sindicato',
+  logoSubtitle: 'Piauí',
+  phone: '(86) 3000-0000',
+  whatsapp: '(86) 90000-0000',
+  email: 'contato@sindicato.org.br',
   hours: 'Seg. a Sex. — 08h às 18h',
-  address: 'Rua Cinegrafista Marques, 952, Sala 9, Fátima, Teresina - PI',
+  address: 'Av. Institucional, 1000 — Centro, Teresina/PI',
   social: {
     instagram: '#',
     facebook: '#',

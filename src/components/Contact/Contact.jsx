@@ -89,7 +89,7 @@ export default function Contact() {
 
         <div className={styles.mapWrap}>
           <iframe
-            title="Localização do SECOVI-THE"
+            title={`Localização do ${siteInfo.shortName}`}
             src={`https://www.google.com/maps?q=${encodeURIComponent(siteInfo.address)}&output=embed`}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

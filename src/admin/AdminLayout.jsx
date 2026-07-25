@@ -1,6 +1,7 @@
 import { NavLink as RouterNavLink, Outlet } from 'react-router-dom';
 import { Newspaper, CalendarDays, FileText, Handshake, Users, LogOut } from 'lucide-react';
 import { useAdminAuth } from './AdminAuthContext';
+import { siteInfo } from '../services/siteContent';
 import styles from './AdminLayout.module.css';
 
 const NAV_LINKS = [
@@ -17,7 +18,7 @@ export default function AdminLayout() {
   return (
     <div className={styles.shell}>
       <aside className={styles.sidebar}>
-        <div className={styles.brand}>Painel SECOVI-THE</div>
+        <div className={styles.brand}>Painel {siteInfo.shortName}</div>
         <nav className={styles.nav}>
           {NAV_LINKS.map(({ to, label, icon: Icon }) => (
             <RouterNavLink

@@ -1,4 +1,4 @@
--- Schema do portal SECOVI-THE.
+-- Schema do portal do Sindicato.
 -- Rode este arquivo inteiro no SQL Editor do seu projeto Supabase
 -- (https://app.supabase.com/project/_/sql/new).
 

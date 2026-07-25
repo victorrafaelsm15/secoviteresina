@@ -1,7 +1,7 @@
-# Portal SECOVI-THE
+# Portal do Sindicato
 
-Portal institucional do SECOVI-THE (Sindicato dos Condomínios, Administradoras
-de Condomínios, Imobiliárias e Shopping Centers de Teresina-PI). React + Vite
+Portal institucional do Sindicato dos Condomínios, Administradoras
+de Condomínios, Imobiliárias e Shopping Centers de Teresina-PI. React + Vite
 + Mantine, com conteúdo dinâmico via Supabase (banco + autenticação + storage)
 e fallback estático quando o Supabase não está configurado.
 
