@@ -45,18 +45,18 @@ cadastro reflete direto nas páginas públicas correspondentes.
 O deploy é automático via GitHub Actions (`.github/workflows/deploy.yml`) a
 cada push na branch `main`. Passos únicos, feitos manualmente por você:
 
-1. O repositório é `victorrafaelsm15/secoviteresina` — como não é um
+1. O repositório é `victorrafaelsm15/sindicondominios-PI` — como não é um
    repositório `usuario.github.io`, o Pages publica como página de projeto,
-   em `https://victorrafaelsm15.github.io/secoviteresina/`. Por isso
-   `vite.config.js` define `base: '/secoviteresina/'` (se o repositório for
-   renomeado no futuro, esse valor precisa mudar junto).
+   em `https://victorrafaelsm15.github.io/sindicondominios-PI/`. Por isso
+   `vite.config.js` define `base: '/sindicondominios-PI/'` (se o repositório
+   for renomeado no futuro, esse valor precisa mudar junto).
 2. Em **Settings → Pages**, em "Build and deployment", selecione a fonte
    **GitHub Actions**.
 3. Em **Settings → Secrets and variables → Actions**, adicione dois
    repository secrets: `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` (os
    mesmos valores do seu `.env`).
 4. Faça push para `main` — o workflow builda e publica automaticamente em
-   `https://victorrafaelsm15.github.io/secoviteresina/`.
+   `https://victorrafaelsm15.github.io/sindicondominios-PI/`.
 
 O projeto já inclui o ajuste necessário para SPA em GitHub Pages
 (`public/404.html` + script em `index.html`), então rotas como `/noticias`
