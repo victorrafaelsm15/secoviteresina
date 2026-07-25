@@ -4,7 +4,7 @@
 
 export const siteInfo = {
   name: 'Sindicato dos Condomínios, Administradoras de Condomínios, Imobiliárias e Shopping Centers de Teresina-PI',
-  shortName: 'Sindicato',
+  shortName: 'Sindicondomínios-PI',
   logoSubtitle: 'Piauí',
   phone: '(86) 3000-0000',
   whatsapp: '(86) 90000-0000',
