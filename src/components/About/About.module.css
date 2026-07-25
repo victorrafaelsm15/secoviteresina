@@ -1,0 +1,98 @@
+.section {
+  background: var(--color-off-white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.title {
+  font-size: clamp(26px, 3vw, 36px);
+  margin: 12px 0 20px;
+}
+
+.text {
+  margin-bottom: 36px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.statItem {
+  border-left: 3px solid var(--color-gold);
+  padding-left: 14px;
+}
+
+.statValue {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+}
+
+.statLabel {
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+}
+
+.timeline {
+  padding-top: 8px;
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 32px;
+  padding-bottom: 36px;
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+.timelineDot {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  border: 3px solid var(--color-white);
+  box-shadow: 0 0 0 2px var(--color-gold);
+}
+
+.timelineLine {
+  position: absolute;
+  left: 6px;
+  top: 20px;
+  bottom: -8px;
+  width: 2px;
+  background: rgba(11, 31, 82, 0.12);
+}
+
+.timelineYear {
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  font-size: 15px;
+}
+
+.timelineText {
+  color: var(--color-text-muted);
+  font-size: 14.5px;
+  margin: 6px 0 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

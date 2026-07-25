@@ -1,0 +1,47 @@
+.section {
+  background: var(--color-off-white);
+  padding-bottom: 56px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.track {
+  display: flex;
+  gap: 56px;
+  width: max-content;
+  animation: scroll 28s linear infinite;
+}
+
+.logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 64px;
+  background: var(--color-white);
+  border-radius: 10px;
+  border: 1px solid rgba(11, 31, 82, 0.08);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.logoImg {
+  max-width: 120px;
+  max-height: 44px;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

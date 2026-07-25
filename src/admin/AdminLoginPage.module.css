@@ -1,0 +1,13 @@
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-off-white);
+  padding: 24px;
+}
+
+.paper {
+  width: 100%;
+  max-width: 380px;
+}

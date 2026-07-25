@@ -1,0 +1,22 @@
+.banner {
+  background: linear-gradient(120deg, var(--color-navy-dark), var(--color-navy));
+  padding: 64px 0 48px;
+}
+
+.inner {
+  text-align: center;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 40px);
+  color: #fff;
+  margin: 0 0 10px;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15.5px;
+  max-width: 560px;
+  margin: 0 auto;
+}

@@ -1,0 +1,134 @@
+.footer {
+  background: var(--color-navy-dark);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 72px 24px 48px;
+}
+
+.brandCol {
+  padding-right: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.logoMark {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-soft));
+  color: var(--color-navy-dark);
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoText {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.tagline {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.social {
+  display: flex;
+  gap: 14px;
+}
+
+.social a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.social a:hover {
+  background: var(--color-gold);
+  color: var(--color-navy-dark);
+  border-color: var(--color-gold);
+}
+
+.colTitle {
+  color: #fff;
+  font-size: 14.5px;
+  font-weight: 700;
+  margin: 0 0 18px;
+  letter-spacing: 0.02em;
+}
+
+.linkList, .contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 13.5px;
+}
+
+.contactList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.5;
+}
+
+.linkList a:hover {
+  color: var(--color-gold-soft);
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bottomInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 24px;
+  font-size: 12.5px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.bottomLinks a:hover {
+  color: var(--color-gold-soft);
+}
+
+@media (max-width: 900px) {
+  .top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+}

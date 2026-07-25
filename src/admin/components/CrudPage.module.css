@@ -1,0 +1,13 @@
+.table {
+  background: #fff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.field {
+  margin-top: 14px;
+}
+
+.field:first-child {
+  margin-top: 0;
+}
