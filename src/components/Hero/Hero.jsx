@@ -4,12 +4,6 @@ import { Button } from '@mantine/core';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 import styles from './Hero.module.css';
 
-const INDICATORS = [
-  { value: '+30', label: 'Anos de história' },
-  { value: '+2.500', label: 'Associados ativos' },
-  { value: '+120', label: 'Parcerias institucionais' },
-];
-
 export default function Hero() {
   return (
     <section className={styles.hero}>
@@ -55,20 +49,6 @@ export default function Hero() {
               Conheça o sindicato
             </Button>
           </div>
-        </motion.div>
-
-        <motion.div
-          className={styles.indicators}
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
-        >
-          {INDICATORS.map((item) => (
-            <div key={item.label} className={styles.indicatorCard}>
-              <span className={styles.indicatorValue}>{item.value}</span>
-              <span className={styles.indicatorLabel}>{item.label}</span>
-            </div>
-          ))}
         </motion.div>
       </div>
     </section>

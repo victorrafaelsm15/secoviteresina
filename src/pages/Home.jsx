@@ -5,7 +5,6 @@ import Services from '../components/Services/Services';
 import Benefits from '../components/Benefits/Benefits';
 import News from '../components/News/News';
 import Partners from '../components/Partners/Partners';
-import Testimonials from '../components/Testimonials/Testimonials';
 import FAQ from '../components/FAQ/FAQ';
 import Contact from '../components/Contact/Contact';
 
@@ -19,7 +18,6 @@ export default function Home() {
       <Benefits />
       <News />
       <Partners />
-      <Testimonials />
       <FAQ />
       <Contact />
     </>

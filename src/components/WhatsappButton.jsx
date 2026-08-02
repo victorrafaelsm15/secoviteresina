@@ -2,6 +2,8 @@ import { MessageCircle } from 'lucide-react';
 import { siteInfo } from '../services/siteContent';
 
 export default function WhatsappButton() {
+  if (!siteInfo.whatsapp) return null;
+
   return (
     <a
       href={`https://wa.me/55${siteInfo.whatsapp.replace(/\D/g, '')}`}

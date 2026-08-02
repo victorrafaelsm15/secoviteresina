@@ -31,19 +31,21 @@ export default function Contact() {
 
           <ul className={styles.infoList}>
             <li><MapPin size={18} /> {siteInfo.address}</li>
-            <li><Phone size={18} /> {siteInfo.phone}</li>
-            <li><Mail size={18} /> {siteInfo.email}</li>
+            {siteInfo.phone && <li><Phone size={18} /> {siteInfo.phone}</li>}
+            {siteInfo.email && <li><Mail size={18} /> {siteInfo.email}</li>}
             <li><Clock size={18} /> {siteInfo.hours}</li>
           </ul>
 
-          <a
-            href={`https://wa.me/55${siteInfo.whatsapp.replace(/\D/g, '')}`}
-            className={styles.whatsappBtn}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <MessageCircle size={18} /> Falar pelo WhatsApp
-          </a>
+          {siteInfo.whatsapp && (
+            <a
+              href={`https://wa.me/55${siteInfo.whatsapp.replace(/\D/g, '')}`}
+              className={styles.whatsappBtn}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <MessageCircle size={18} /> Falar pelo WhatsApp
+            </a>
+          )}
         </div>
 
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>

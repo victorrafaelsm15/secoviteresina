@@ -3,6 +3,7 @@ import { Button, TextInput, Select, SimpleGrid } from '@mantine/core';
 import { notifications } from '@mantine/notifications';
 import { CheckCircle2 } from 'lucide-react';
 import PageHeader from '../components/PageHeader/PageHeader';
+import { associateRights, associateDuties } from '../services/siteContent';
 import styles from './FiliacaoPage.module.css';
 
 const REASONS = [
@@ -28,7 +29,7 @@ export default function FiliacaoPage() {
 
   return (
     <>
-      <PageHeader title="Filie-se" subtitle="Faça parte de uma entidade sólida, com décadas de representação institucional." />
+      <PageHeader title="Filie-se" subtitle="Faça parte de uma entidade sólida, com representação institucional em todo o Piauí." />
       <section className="section">
         <div className={`container ${styles.grid}`}>
           <div>
@@ -71,6 +72,33 @@ export default function FiliacaoPage() {
               Enviar solicitação
             </Button>
           </form>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <h2 className={styles.title}>Direitos e Deveres do Associado</h2>
+          <p className={styles.rightsIntro}>
+            Conforme o Estatuto Social do Sindicato (Art. 6º e Art. 8º).
+          </p>
+          <div className={styles.rightsGrid}>
+            <div>
+              <h3 className={styles.subTitle}>Direitos</h3>
+              <ul className={styles.reasons}>
+                {associateRights.map((r) => (
+                  <li key={r}><CheckCircle2 size={18} /> {r}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className={styles.subTitle}>Deveres</h3>
+              <ul className={styles.reasons}>
+                {associateDuties.map((d) => (
+                  <li key={d}><CheckCircle2 size={18} /> {d}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </>

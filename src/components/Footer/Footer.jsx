@@ -70,8 +70,8 @@ export default function Footer() {
           <h4 className={styles.colTitle}>Contato</h4>
           <ul className={styles.contactList}>
             <li><MapPin size={15} /> {siteInfo.address}</li>
-            <li><Phone size={15} /> {siteInfo.phone}</li>
-            <li><Mail size={15} /> {siteInfo.email}</li>
+            {siteInfo.phone && <li><Phone size={15} /> {siteInfo.phone}</li>}
+            {siteInfo.email && <li><Mail size={15} /> {siteInfo.email}</li>}
           </ul>
         </div>
       </div>

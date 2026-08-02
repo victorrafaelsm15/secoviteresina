@@ -3,14 +3,22 @@
 // Substitua os textos abaixo pelo conteúdo oficial definitivo quando disponível.
 
 export const siteInfo = {
-  name: 'Sindicato dos Condomínios, Administradoras de Condomínios, Imobiliárias e Shopping Centers de Teresina-PI',
+  // Nome oficial por extenso, conforme o Estatuto Social. Não exibir em
+  // pontos de maior destaque (header/logo/hero) — usar em título da página,
+  // rodapé ou corpo de texto institucional.
+  name: 'Sindicato dos Condomínios Residenciais, Comerciais e Mistos do Estado do Piauí',
+  legalAbbreviation: 'SINDICONDOMÍNIOS/PI',
   shortName: 'Sindicondomínios-PI',
   logoSubtitle: 'Piauí',
-  phone: '(86) 3000-0000',
-  whatsapp: '(86) 90000-0000',
-  email: 'contato@sindicato.org.br',
+  // PENDENTE — inserir telefone real assim que fornecido pelo cliente.
+  phone: '',
+  // PENDENTE — inserir WhatsApp real (apenas números, com DDD, ex: "86999998888").
+  // O botão de WhatsApp já funciona automaticamente assim que este campo for preenchido.
+  whatsapp: '',
+  // PENDENTE — inserir e-mail real assim que fornecido pelo cliente.
+  email: '',
   hours: 'Seg. a Sex. — 08h às 18h',
-  address: 'Av. Institucional, 1000 — Centro, Teresina/PI',
+  address: 'Rua Manoel Nogueira Lima, nº 1770, Bairro Jóquei, Teresina/PI, CEP 64.049-190',
   social: {
     instagram: '#',
     facebook: '#',
@@ -30,20 +38,8 @@ export const quickAccess = [
 
 export const aboutContent = {
   eyebrow: 'Quem somos',
-  title: 'Décadas de representação institucional sólida',
-  text: 'O sindicato atua na defesa dos interesses da categoria, promovendo representação institucional, segurança jurídica e valorização profissional. Nossa atuação combina tradição, credibilidade e um compromisso permanente com a excelência no atendimento aos associados.',
-  stats: [
-    { value: '+30', label: 'Anos de atuação' },
-    { value: '+2.500', label: 'Associados' },
-    { value: '+120', label: 'Empresas parceiras' },
-    { value: '+80', label: 'Cursos realizados' },
-  ],
-  timeline: [
-    { year: 'Fundação', text: 'Criação da entidade para representar a categoria no estado.' },
-    { year: 'Expansão', text: 'Ampliação da base de associados e parcerias institucionais.' },
-    { year: 'Consolidação', text: 'Reconhecimento como referência em representação sindical.' },
-    { year: 'Atualidade', text: 'Modernização de serviços e atendimento digital aos associados.' },
-  ],
+  title: 'Representação institucional para os condomínios do Piauí',
+  text: `O ${siteInfo.name} (${siteInfo.legalAbbreviation}) atua na defesa dos interesses da categoria em todo o Estado do Piauí, promovendo representação institucional, segurança jurídica e valorização profissional para condomínios residenciais, comerciais e mistos, administradoras de condomínios, imobiliárias e shopping centers.`,
 };
 
 export const services = [
@@ -71,12 +67,6 @@ export const boardMembers = [
   { name: 'Diretor Financeiro', role: 'Diretoria Financeira', description: 'Gestão financeira e orçamentária.' },
 ];
 
-export const testimonials = [
-  { name: 'Associado', role: 'Categoria representada', text: 'O suporte institucional fez toda a diferença na condução das questões trabalhistas.' },
-  { name: 'Associada', role: 'Categoria representada', text: 'Atendimento ágil e profissional em todas as consultorias realizadas.' },
-  { name: 'Associado', role: 'Categoria representada', text: 'Os cursos de capacitação elevaram o nível técnico da nossa equipe.' },
-];
-
 export const documentCategories = [
   { value: 'convencao', label: 'Convenção Coletiva' },
   { value: 'contribuicao', label: 'Contribuição Assistencial' },
@@ -89,4 +79,21 @@ export const faqItems = [
   { question: 'Quais os benefícios de ser associado?', answer: 'Associados têm acesso a consultoria jurídica, convênios, cursos e eventos exclusivos.' },
   { question: 'Como acesso a Convenção Coletiva vigente?', answer: 'O documento está disponível na área de Documentos, com atualização periódica.' },
   { question: 'Como entro em contato com a diretoria?', answer: 'Utilize os canais disponíveis na seção de Contato, incluindo telefone, e-mail e WhatsApp.' },
+];
+
+// Direitos e deveres do associado, conforme Art. 6º e Art. 8º do Estatuto Social.
+export const associateRights = [
+  'Utilizar as dependências do Sindicato',
+  'Votar e ser votado nas eleições sindicais',
+  'Participar das Assembleias Gerais',
+  'Gozar dos benefícios e da assistência do Sindicato, incluindo assistência judiciária',
+  'Requerer a convocação de Assembleia Geral Extraordinária, com o apoio de 10% dos associados',
+  'Participar de eventos e promoções realizados pelo Sindicato',
+  'Desligar-se do quadro associativo a qualquer momento, sem ônus',
+  'Não responder solidária ou subsidiariamente pelas obrigações do Sindicato',
+];
+
+export const associateDuties = [
+  'Pagar a mensalidade definida pela Diretoria e aprovada em Assembleia Geral',
+  'Participar das Assembleias Gerais, ordinárias e extraordinárias',
 ];

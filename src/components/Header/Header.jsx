@@ -36,12 +36,16 @@ export default function Header() {
       <div className={styles.topBar}>
         <div className={`container ${styles.topBarInner}`}>
           <div className={styles.topBarInfo}>
-            <a href={`tel:${siteInfo.phone}`} className={styles.topBarItem}>
-              <Phone size={14} /> {siteInfo.phone}
-            </a>
-            <a href={`mailto:${siteInfo.email}`} className={styles.topBarItem}>
-              <Mail size={14} /> {siteInfo.email}
-            </a>
+            {siteInfo.phone && (
+              <a href={`tel:${siteInfo.phone}`} className={styles.topBarItem}>
+                <Phone size={14} /> {siteInfo.phone}
+              </a>
+            )}
+            {siteInfo.email && (
+              <a href={`mailto:${siteInfo.email}`} className={styles.topBarItem}>
+                <Mail size={14} /> {siteInfo.email}
+              </a>
+            )}
             <span className={styles.topBarItem}>
               <Clock size={14} /> {siteInfo.hours}
             </span>
