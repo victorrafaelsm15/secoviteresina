@@ -85,7 +85,6 @@ export const affiliationRequirements = {
 
 export const services = [
   { id: 1, title: 'Consultoria Jurídica', description: 'Orientação jurídica especializada para associados em questões trabalhistas e institucionais.', icon: 'Scale' },
-  { id: 2, title: 'Consultoria Trabalhista', description: 'Suporte completo em legislação trabalhista e relações de trabalho.', icon: 'Briefcase' },
   { id: 3, title: 'Representação Sindical', description: 'Defesa coletiva dos interesses da categoria perante órgãos e instituições.', icon: 'Landmark' },
   { id: 4, title: 'Cursos e Capacitação', description: 'Programas de formação continuada para desenvolvimento profissional.', icon: 'GraduationCap' },
   { id: 5, title: 'Eventos', description: 'Congressos, palestras e encontros institucionais ao longo do ano.', icon: 'CalendarDays' },
