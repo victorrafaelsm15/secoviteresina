@@ -1,0 +1,76 @@
+.section {
+  background: linear-gradient(135deg, var(--color-navy-dark), var(--color-navy));
+  color: #fff;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.iconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(217, 165, 33, 0.16);
+  border: 1px solid rgba(233, 197, 105, 0.4);
+  color: var(--color-gold-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 700;
+  margin: 12px 0 4px;
+}
+
+.date {
+  color: var(--color-gold-soft);
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0 0 20px;
+}
+
+.intro {
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.list svg {
+  color: var(--color-gold-soft);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footer {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13.5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding-top: 20px;
+  margin: 0;
+}

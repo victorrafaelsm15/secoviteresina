@@ -51,9 +51,21 @@ export default function Header() {
             </span>
           </div>
           <div className={styles.topBarSocial}>
-            <a href={siteInfo.social.instagram} aria-label="Instagram"><IconBrandInstagram size={15} /></a>
-            <a href={siteInfo.social.facebook} aria-label="Facebook"><IconBrandFacebook size={15} /></a>
-            <a href={siteInfo.social.linkedin} aria-label="LinkedIn"><IconBrandLinkedin size={15} /></a>
+            {siteInfo.social.instagram !== '#' && (
+              <a href={siteInfo.social.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">
+                <IconBrandInstagram size={15} />
+              </a>
+            )}
+            {siteInfo.social.facebook !== '#' && (
+              <a href={siteInfo.social.facebook} target="_blank" rel="noreferrer" aria-label="Facebook">
+                <IconBrandFacebook size={15} />
+              </a>
+            )}
+            {siteInfo.social.linkedin !== '#' && (
+              <a href={siteInfo.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <IconBrandLinkedin size={15} />
+              </a>
+            )}
           </div>
         </div>
       </div>

@@ -15,12 +15,11 @@ export const siteInfo = {
   // PENDENTE — inserir WhatsApp real (apenas números, com DDD, ex: "86999998888").
   // O botão de WhatsApp já funciona automaticamente assim que este campo for preenchido.
   whatsapp: '',
-  // PENDENTE — inserir e-mail real assim que fornecido pelo cliente.
-  email: '',
+  email: 'sindicondominiospi@gmail.com',
   hours: 'Seg. a Sex. — 08h às 18h',
   address: 'Rua Manoel Nogueira Lima, nº 1770, Bairro Jóquei, Teresina/PI, CEP 64.049-190',
   social: {
-    instagram: '#',
+    instagram: 'https://www.instagram.com/sindicondominiospi/',
     facebook: '#',
     linkedin: '#',
   },
@@ -40,6 +39,49 @@ export const aboutContent = {
   eyebrow: 'Quem somos',
   title: 'Representação institucional para os condomínios do Piauí',
   text: `O ${siteInfo.name} (${siteInfo.legalAbbreviation}) atua na defesa dos interesses da categoria em todo o Estado do Piauí, promovendo representação institucional, segurança jurídica e valorização profissional para condomínios residenciais, comerciais e mistos, administradoras de condomínios, imobiliárias e shopping centers.`,
+};
+
+// Conteúdo institucional extraído da Circular nº 001/2026.
+export const missionVisionValues = {
+  mission: 'Representar e defender os interesses da categoria dos condomínios, promovendo segurança jurídica, fortalecimento institucional, capacitação permanente e valorização da gestão condominial.',
+  vision: 'Ser referência na representação sindical dos condomínios, contribuindo para o aperfeiçoamento da administração condominial e para o desenvolvimento sustentável do setor.',
+  values: ['Ética', 'Transparência', 'Legalidade', 'Responsabilidade institucional', 'Cooperação', 'Independência', 'Inovação'],
+};
+
+export const historyText = 'O SINDICONDOMÍNIOS-PI nasceu da necessidade de proporcionar aos condomínios do Estado do Piauí uma representação sindical específica, considerando as peculiaridades da administração condominial e a crescente importância desse segmento para a sociedade. Desde sua constituição, a entidade conduziu todo o processo de organização institucional observando rigorosamente a legislação sindical e os procedimentos administrativos estabelecidos pelo Ministério do Trabalho e Emprego, pautando sua atuação pela legalidade, boa-fé, transparência e respeito às instituições públicas.';
+
+export const activityAreas = [
+  'Representação institucional perante Poderes Públicos e órgãos de fiscalização',
+  'Defesa dos interesses coletivos dos condomínios',
+  'Acompanhamento legislativo e regulatório',
+  'Participação em negociações coletivas',
+  'Emissão de notas técnicas, pareceres jurídicos e orientações administrativas',
+  'Cursos, palestras, seminários, workshops e programas de capacitação',
+  'Incentivo a boas práticas de governança, sustentabilidade, acessibilidade, inovação e conformidade legal',
+  'Desenvolvimento de convênios e projetos institucionais',
+  'Canais permanentes de atendimento, orientação e comunicação',
+];
+
+export const officialRecognition = {
+  date: '07 de julho de 2026',
+  intro: 'Nessa data, foi publicado no Diário Oficial da União o despacho do Ministério do Trabalho e Emprego que:',
+  points: [
+    `Deferiu o registro sindical do ${siteInfo.legalAbbreviation}`,
+    'Reconheceu a entidade como único representante da categoria dos Condomínios Residenciais, Comerciais, Mistos, Verticais, Horizontais e Shopping Centers',
+    'Definiu sua base territorial em todo o Estado do Piauí',
+  ],
+  footer: 'A entidade integra o Cadastro Nacional de Entidades Sindicais (CNES).',
+};
+
+export const affiliationRequirements = {
+  intro: 'A filiação ao SINDICONDOMÍNIOS-PI é voluntária. Podem filiar-se condomínios residenciais, comerciais, mistos, verticais, horizontais e shopping centers localizados no Estado do Piauí. Após análise e aprovação da Diretoria, o condomínio passa a integrar o quadro de associados, com direito aos benefícios previstos no Estatuto Social.',
+  documents: [
+    'Ficha de Filiação',
+    'Convenção de Condomínio',
+    'Ata de eleição do síndico em exercício',
+    'Cartão do CNPJ',
+    'Documento de identificação do representante legal',
+  ],
 };
 
 export const services = [

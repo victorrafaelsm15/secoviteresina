@@ -3,7 +3,7 @@ import { Button, TextInput, Select, SimpleGrid } from '@mantine/core';
 import { notifications } from '@mantine/notifications';
 import { CheckCircle2 } from 'lucide-react';
 import PageHeader from '../components/PageHeader/PageHeader';
-import { associateRights, associateDuties } from '../services/siteContent';
+import { associateRights, associateDuties, affiliationRequirements } from '../services/siteContent';
 import styles from './FiliacaoPage.module.css';
 
 const REASONS = [
@@ -30,6 +30,21 @@ export default function FiliacaoPage() {
   return (
     <>
       <PageHeader title="Filie-se" subtitle="Faça parte de uma entidade sólida, com representação institucional em todo o Piauí." />
+
+      <section className="section">
+        <div className="container">
+          <p className={styles.rightsIntro} style={{ maxWidth: 720 }}>
+            {affiliationRequirements.intro}
+          </p>
+          <h3 className={styles.subTitle}>Documentos necessários</h3>
+          <ul className={styles.reasons}>
+            {affiliationRequirements.documents.map((d) => (
+              <li key={d}><CheckCircle2 size={18} /> {d}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <section className="section">
         <div className={`container ${styles.grid}`}>
           <div>

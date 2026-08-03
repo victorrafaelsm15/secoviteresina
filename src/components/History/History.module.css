@@ -1,0 +1,18 @@
+.section {
+  background: var(--color-off-white);
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(26px, 3vw, 36px);
+  margin: 12px 0 20px;
+}
+
+.text {
+  text-align: left;
+}
