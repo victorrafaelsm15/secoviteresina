@@ -1,22 +1,23 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, Tag, ArrowRight } from 'lucide-react';
 import { listNews } from '../../services/newsService';
 import styles from './News.module.css';
 
-const PLACEHOLDER_NEWS = [
-  { id: 'ph1', title: 'Sindicato realiza encontro anual da categoria', category: 'Institucional', published_at: new Date().toISOString(), excerpt: 'Evento reuniu associados para discutir os próximos passos da entidade.', image_url: null },
-  { id: 'ph2', title: 'Nova convenção coletiva é assinada', category: 'Jurídico', published_at: new Date().toISOString(), excerpt: 'Documento traz avanços importantes para a categoria representada.', image_url: null },
-  { id: 'ph3', title: 'Inscrições abertas para curso de capacitação', category: 'Cursos', published_at: new Date().toISOString(), excerpt: 'Nova turma de formação profissional começa no próximo mês.', image_url: null },
+export const PLACEHOLDER_NEWS = [
+  { id: 'ph1', title: 'Sindicato realiza encontro anual da categoria', category: 'Institucional', published_at: new Date().toISOString(), excerpt: 'Evento reuniu associados para discutir os próximos passos da entidade.', content: 'Evento reuniu associados para discutir os próximos passos da entidade.', image_url: null },
+  { id: 'ph2', title: 'Nova convenção coletiva é assinada', category: 'Jurídico', published_at: new Date().toISOString(), excerpt: 'Documento traz avanços importantes para a categoria representada.', content: 'Documento traz avanços importantes para a categoria representada.', image_url: null },
+  { id: 'ph3', title: 'Inscrições abertas para curso de capacitação', category: 'Cursos', published_at: new Date().toISOString(), excerpt: 'Nova turma de formação profissional começa no próximo mês.', content: 'Nova turma de formação profissional começa no próximo mês.', image_url: null },
 ];
 
-export default function News() {
-  const [news, setNews] = useState(PLACEHOLDER_NEWS);
+export default function News({ limit = 3, showViewAll = true }) {
+  const [news, setNews] = useState(PLACEHOLDER_NEWS.slice(0, limit));
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let active = true;
-    listNews({ limit: 3 })
+    listNews({ limit })
       .then((data) => {
         if (active && data?.length) setNews(data);
       })
@@ -27,7 +28,7 @@ export default function News() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [limit]);
 
   return (
     <section className={`section ${styles.section}`} id="noticias">
@@ -39,9 +40,11 @@ export default function News() {
               Notícias e comunicados
             </h2>
           </div>
-          <button type="button" className={styles.viewAll}>
-            Ver todas <ArrowRight size={15} />
-          </button>
+          {showViewAll && (
+            <Link to="/noticias" className={styles.viewAll}>
+              Ver todas <ArrowRight size={15} />
+            </Link>
+          )}
         </div>
 
         <div className={styles.grid} aria-busy={loading}>
@@ -67,9 +70,9 @@ export default function News() {
                 </div>
                 <h3 className={styles.cardTitle}>{item.title}</h3>
                 <p className={styles.cardExcerpt}>{item.excerpt}</p>
-                <button type="button" className={styles.cardLink}>
+                <Link to={`/noticias/${item.id}`} className={styles.cardLink}>
                   Ler mais <ArrowRight size={14} />
-                </button>
+                </Link>
               </div>
             </motion.article>
           ))}

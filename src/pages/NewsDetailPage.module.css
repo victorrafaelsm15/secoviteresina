@@ -1,0 +1,40 @@
+.wrap {
+  max-width: 760px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-navy);
+}
+
+.metaTag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.image {
+  height: 320px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-off-white);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 28px;
+}
+
+.body {
+  color: var(--color-text);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.body p {
+  margin: 0 0 18px;
+}
