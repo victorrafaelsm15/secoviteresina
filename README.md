@@ -40,28 +40,40 @@ Acesse `/admin/login` com um usuário criado no passo acima. O painel permite
 gerenciar Notícias, Eventos, Documentos, Parceiros e Diretoria — cada
 cadastro reflete direto nas páginas públicas correspondentes.
 
-## Deploy (GitHub Pages)
+## Deploy (GitHub Pages + domínio próprio)
 
 O deploy é automático via GitHub Actions (`.github/workflows/deploy.yml`) a
-cada push na branch `main`. Passos únicos, feitos manualmente por você:
+cada push na branch `main`. O projeto está configurado para publicar na
+**raiz de um domínio próprio** (`vite.config.js` define `base: '/'`), não
+mais no subcaminho `usuario.github.io/repositorio/`.
 
-1. O repositório é `victorrafaelsm15/sindicondominios-PI` — como não é um
-   repositório `usuario.github.io`, o Pages publica como página de projeto,
-   em `https://victorrafaelsm15.github.io/sindicondominios-PI/`. Por isso
-   `vite.config.js` define `base: '/sindicondominios-PI/'` (se o repositório
-   for renomeado no futuro, esse valor precisa mudar junto).
-2. Em **Settings → Pages**, em "Build and deployment", selecione a fonte
+Passos únicos, feitos manualmente por você:
+
+1. Em **Settings → Pages**, em "Build and deployment", selecione a fonte
    **GitHub Actions**.
-3. Em **Settings → Secrets and variables → Actions**, adicione dois
+2. Em **Settings → Secrets and variables → Actions**, adicione dois
    repository secrets: `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` (os
    mesmos valores do seu `.env`).
-4. Faça push para `main` — o workflow builda e publica automaticamente em
-   `https://victorrafaelsm15.github.io/sindicondominios-PI/`.
+3. Edite `public/CNAME` e substitua `seudominio.com.br` pelo domínio real
+   que você comprou (esse arquivo é copiado para o build e diz ao GitHub
+   Pages qual domínio customizado servir).
+4. No provedor onde comprou o domínio, aponte o DNS para o GitHub Pages:
+   - Domínio raiz (`seudominio.com.br`): registros **A** apontando para
+     `185.199.108.153`, `185.199.109.153`, `185.199.110.153` e
+     `185.199.111.153`.
+   - Subdomínio (`www.seudominio.com.br`): registro **CNAME** apontando
+     para `victorrafaelsm15.github.io`.
+5. Em **Settings → Pages → Custom domain**, digite o mesmo domínio e
+   aguarde a verificação (pode levar algumas horas pela propagação de DNS).
+   Depois de verificado, marque **Enforce HTTPS**.
+6. Faça push para `main` — o workflow builda e publica automaticamente no
+   domínio configurado.
 
 O projeto já inclui o ajuste necessário para SPA em GitHub Pages
-(`public/404.html` + script em `index.html`), então rotas como `/noticias`
-ou `/admin/eventos` funcionam normalmente mesmo com carregamento direto pela
-URL.
+(`public/404.html` + script em `index.html`, técnica
+[spa-github-pages](https://github.com/rafgraph/spa-github-pages)), então
+qualquer rota interna (`/noticias`, `/admin/login`, `/admin/eventos` etc.)
+funciona normalmente mesmo com acesso direto pela URL ou F5 na página.
 
 ## Estrutura
 
