@@ -37,7 +37,7 @@ export const quickAccess = [
 export const aboutContent = {
   eyebrow: 'Quem somos',
   title: 'Representação institucional para os condomínios do Piauí',
-  text: `O ${siteInfo.name} (${siteInfo.legalAbbreviation}) atua na defesa dos interesses da categoria em todo o Estado do Piauí, promovendo representação institucional, segurança jurídica e valorização profissional para condomínios residenciais, comerciais e mistos, administradoras de condomínios, imobiliárias e shopping centers.`,
+  text: `O ${siteInfo.name} (${siteInfo.legalAbbreviation}) atua na defesa dos interesses da categoria em todo o Estado do Piauí, promovendo representação institucional, segurança jurídica e valorização profissional para condomínios residenciais, comerciais, mistos, verticais e horizontais, além de shopping centers.`,
 };
 
 // Conteúdo institucional extraído da Circular nº 001/2026.

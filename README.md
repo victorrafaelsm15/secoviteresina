@@ -1,7 +1,7 @@
 # Portal do Sindicato
 
-Portal institucional do Sindicato dos Condomínios, Administradoras
-de Condomínios, Imobiliárias e Shopping Centers de Teresina-PI. React + Vite
+Portal institucional do SINDICONDOMÍNIOS-PI (Sindicato dos Condomínios
+Residenciais, Comerciais e Mistos do Estado do Piauí). React + Vite
 + Mantine, com conteúdo dinâmico via Supabase (banco + autenticação + storage)
 e fallback estático quando o Supabase não está configurado.
 
