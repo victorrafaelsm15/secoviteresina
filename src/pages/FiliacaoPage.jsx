@@ -80,7 +80,7 @@ export default function FiliacaoPage() {
             <Select
               label="Categoria"
               mt="md"
-              data={['Condomínio', 'Administradora', 'Imobiliária', 'Shopping Center']}
+              data={['Condomínio', 'Shopping Center']}
               {...register('category')}
             />
             <Button type="submit" mt="lg" fullWidth size="md" radius="xl" color="gold.6" c="navy.9" fw={700} loading={isSubmitting}>

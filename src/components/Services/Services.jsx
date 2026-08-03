@@ -1,6 +1,5 @@
 import * as Icons from 'lucide-react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 import { services } from '../../services/siteContent';
 import styles from './Services.module.css';
 
@@ -35,9 +34,6 @@ export default function Services() {
                 </span>
                 <h3 className={styles.cardTitle}>{service.title}</h3>
                 <p className={styles.cardDesc}>{service.description}</p>
-                <button type="button" className={styles.cardLink}>
-                  Saiba mais <ArrowRight size={15} />
-                </button>
               </motion.div>
             );
           })}
