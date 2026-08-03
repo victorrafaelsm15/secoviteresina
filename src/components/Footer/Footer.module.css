@@ -17,28 +17,20 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   margin-bottom: 18px;
 }
 
-.logoMark {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-soft));
-  color: var(--color-navy-dark);
-  font-family: 'Playfair Display', serif;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.logoBadge {
+  display: inline-flex;
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px 14px;
 }
 
-.logoText {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: #fff;
+.logoImg {
+  height: 44px;
+  width: auto;
+  display: block;
 }
 
 .tagline {

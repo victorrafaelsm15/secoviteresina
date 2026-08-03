@@ -73,41 +73,18 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
-.logoMark {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-navy), var(--color-navy-dark));
-  color: var(--color-gold-soft);
-  font-family: 'Playfair Display', serif;
-  font-weight: 800;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+.logoImg {
+  height: 76px;
+  width: auto;
+  display: block;
 }
 
-.logoText {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--color-navy-dark);
-  line-height: 1.15;
-}
-
-.logoSub {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-gold);
+@media (max-width: 900px) {
+  .logoImg {
+    height: 52px;
+  }
 }
 
 .nav {

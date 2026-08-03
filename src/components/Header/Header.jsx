@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { IconBrandInstagram, IconBrandFacebook, IconBrandLinkedin } from '@tabler/icons-react';
 import { siteInfo } from '../../services/siteContent';
+import logo from '../../assets/logo.png';
 import styles from './Header.module.css';
 
 const NAV_LINKS = [
@@ -72,11 +73,7 @@ export default function Header() {
 
       <div className={`container ${styles.mainBar}`}>
         <Link to="/" className={styles.logo}>
-          <span className={styles.logoMark}>S</span>
-          <span className={styles.logoText}>
-            {siteInfo.shortName}
-            <span className={styles.logoSub}>{siteInfo.logoSubtitle}</span>
-          </span>
+          <img src={logo} alt={siteInfo.shortName} className={styles.logoImg} />
         </Link>
 
         <nav className={styles.nav}>

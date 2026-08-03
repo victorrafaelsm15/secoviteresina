@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { IconBrandInstagram, IconBrandFacebook, IconBrandLinkedin } from '@tabler/icons-react';
 import { siteInfo } from '../../services/siteContent';
+import logo from '../../assets/logo.png';
 import styles from './Footer.module.css';
 
 const COLUMNS = [
@@ -40,8 +41,9 @@ export default function Footer() {
       <div className={`container ${styles.top}`}>
         <div className={styles.brandCol}>
           <div className={styles.logo}>
-            <span className={styles.logoMark}>S</span>
-            <span className={styles.logoText}>{siteInfo.shortName}</span>
+            <span className={styles.logoBadge}>
+              <img src={logo} alt={siteInfo.shortName} className={styles.logoImg} />
+            </span>
           </div>
           <p className={styles.tagline}>
             Representação institucional, credibilidade e valorização profissional para a categoria em todo o Piauí.

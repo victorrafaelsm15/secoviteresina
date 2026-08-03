@@ -9,7 +9,6 @@ export const siteInfo = {
   name: 'Sindicato dos Condomínios Residenciais, Comerciais e Mistos do Estado do Piauí',
   legalAbbreviation: 'SINDICONDOMÍNIOS/PI',
   shortName: 'Sindicondomínios-PI',
-  logoSubtitle: 'Piauí',
   // PENDENTE — inserir telefone real assim que fornecido pelo cliente.
   phone: '',
   // PENDENTE — inserir WhatsApp real (apenas números, com DDD, ex: "86999998888").
