@@ -54,15 +54,16 @@ Passos únicos, feitos manualmente por você:
 2. Em **Settings → Secrets and variables → Actions**, adicione dois
    repository secrets: `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` (os
    mesmos valores do seu `.env`).
-3. Edite `public/CNAME` e substitua `seudominio.com.br` pelo domínio real
-   que você comprou (esse arquivo é copiado para o build e diz ao GitHub
-   Pages qual domínio customizado servir).
-4. No provedor onde comprou o domínio, aponte o DNS para o GitHub Pages:
-   - Domínio raiz (`seudominio.com.br`): registros **A** apontando para
-     `185.199.108.153`, `185.199.109.153`, `185.199.110.153` e
+3. O domínio já está configurado em `public/CNAME`:
+   `sindicondominiospi.com.br` (esse arquivo é copiado para o build e diz
+   ao GitHub Pages qual domínio customizado servir).
+4. No provedor onde o domínio foi comprado, aponte o DNS para o GitHub
+   Pages:
+   - Domínio raiz (`sindicondominiospi.com.br`): registros **A** apontando
+     para `185.199.108.153`, `185.199.109.153`, `185.199.110.153` e
      `185.199.111.153`.
-   - Subdomínio (`www.seudominio.com.br`): registro **CNAME** apontando
-     para `victorrafaelsm15.github.io`.
+   - Subdomínio (`www.sindicondominiospi.com.br`): registro **CNAME**
+     apontando para `victorrafaelsm15.github.io`.
 5. Em **Settings → Pages → Custom domain**, digite o mesmo domínio e
    aguarde a verificação (pode levar algumas horas pela propagação de DNS).
    Depois de verificado, marque **Enforce HTTPS**.
