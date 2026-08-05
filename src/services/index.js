@@ -5,6 +5,7 @@ export const documentsService = createCrudService('documents', 'created_at');
 export const partnersService = createCrudService('partners', 'created_at');
 export const boardService = createCrudService('board_members', 'display_order');
 export const bannersService = createCrudService('banners', 'display_order');
+export const filiacaoRequestsService = createCrudService('filiacao_requests', 'created_at');
 
 export * from './newsService';
 export { supabase } from './supabaseClient';

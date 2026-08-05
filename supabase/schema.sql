@@ -53,6 +53,17 @@ create table if not exists board_members (
   created_at timestamptz not null default now()
 );
 
+create table if not exists filiacao_requests (
+  id uuid primary key default gen_random_uuid(),
+  sindico_name text not null,
+  condominio_name text not null,
+  cnpj text not null,
+  email text not null,
+  phone text,
+  category text,
+  created_at timestamptz not null default now()
+);
+
 -- ==========================================================
 -- Row Level Security: leitura pública, escrita só para admin logado
 -- ==========================================================
@@ -90,6 +101,34 @@ begin
     );
   end loop;
 end $$;
+
+-- ==========================================================
+-- Row Level Security: filiacao_requests
+-- Qualquer visitante pode enviar uma solicitação (insert), mas só o
+-- admin logado pode ler, atualizar ou excluir (dados sensíveis).
+-- ==========================================================
+
+alter table filiacao_requests enable row level security;
+
+drop policy if exists "filiacao_requests_public_insert" on filiacao_requests;
+create policy "filiacao_requests_public_insert"
+  on filiacao_requests for insert
+  with check (true);
+
+drop policy if exists "filiacao_requests_admin_select" on filiacao_requests;
+create policy "filiacao_requests_admin_select"
+  on filiacao_requests for select
+  using (auth.role() = 'authenticated');
+
+drop policy if exists "filiacao_requests_admin_update" on filiacao_requests;
+create policy "filiacao_requests_admin_update"
+  on filiacao_requests for update
+  using (auth.role() = 'authenticated');
+
+drop policy if exists "filiacao_requests_admin_delete" on filiacao_requests;
+create policy "filiacao_requests_admin_delete"
+  on filiacao_requests for delete
+  using (auth.role() = 'authenticated');
 
 -- ==========================================================
 -- Storage: bucket único para imagens e documentos do painel admin

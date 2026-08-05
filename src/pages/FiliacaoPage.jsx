@@ -4,6 +4,7 @@ import { notifications } from '@mantine/notifications';
 import { CheckCircle2 } from 'lucide-react';
 import PageHeader from '../components/PageHeader/PageHeader';
 import { associateRights, associateDuties, affiliationRequirements } from '../services/siteContent';
+import { filiacaoRequestsService } from '../services';
 import styles from './FiliacaoPage.module.css';
 
 const REASONS = [
@@ -17,14 +18,22 @@ const REASONS = [
 export default function FiliacaoPage() {
   const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm();
 
-  const onSubmit = async () => {
-    await new Promise((r) => setTimeout(r, 800));
-    notifications.show({
-      title: 'Solicitação enviada',
-      message: 'Recebemos seu pedido de filiação. Nossa equipe entrará em contato.',
-      color: 'navy',
-    });
-    reset();
+  const onSubmit = async (values) => {
+    try {
+      await filiacaoRequestsService.create(values);
+      notifications.show({
+        title: 'Solicitação enviada',
+        message: 'Recebemos seu pedido de filiação. Nossa equipe entrará em contato.',
+        color: 'navy',
+      });
+      reset();
+    } catch {
+      notifications.show({
+        title: 'Erro ao enviar',
+        message: 'Não foi possível registrar sua solicitação. Tente novamente.',
+        color: 'red',
+      });
+    }
   };
 
   return (
@@ -59,22 +68,29 @@ export default function FiliacaoPage() {
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <SimpleGrid cols={{ base: 1, sm: 2 }}>
               <TextInput
-                label="Nome completo"
-                error={errors.name?.message}
-                {...register('name', { required: 'Campo obrigatório' })}
+                label="Nome do síndico"
+                error={errors.sindico_name?.message}
+                {...register('sindico_name', { required: 'Campo obrigatório' })}
               />
               <TextInput
-                label="CNPJ / CPF"
-                error={errors.doc?.message}
-                {...register('doc', { required: 'Campo obrigatório' })}
+                label="Nome do condomínio"
+                error={errors.condominio_name?.message}
+                {...register('condominio_name', { required: 'Campo obrigatório' })}
               />
             </SimpleGrid>
             <SimpleGrid cols={{ base: 1, sm: 2 }} mt="md">
+              <TextInput
+                label="CNPJ do condomínio"
+                error={errors.cnpj?.message}
+                {...register('cnpj', { required: 'Campo obrigatório' })}
+              />
               <TextInput
                 label="E-mail"
                 error={errors.email?.message}
                 {...register('email', { required: 'Campo obrigatório' })}
               />
+            </SimpleGrid>
+            <SimpleGrid cols={{ base: 1, sm: 2 }} mt="md">
               <TextInput label="Telefone" {...register('phone')} />
             </SimpleGrid>
             <Select

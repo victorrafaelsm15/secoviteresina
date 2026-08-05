@@ -22,6 +22,7 @@ import { eventsConfig } from './admin/entities/eventsConfig';
 import { documentsConfig } from './admin/entities/documentsConfig';
 import { partnersConfig } from './admin/entities/partnersConfig';
 import { boardConfig } from './admin/entities/boardConfig';
+import FiliacoesPage from './admin/pages/FiliacoesPage';
 
 export default function App() {
   return (
@@ -50,6 +51,7 @@ export default function App() {
             <Route path="documentos" element={<CrudPage config={documentsConfig} />} />
             <Route path="parceiros" element={<CrudPage config={partnersConfig} />} />
             <Route path="diretoria" element={<CrudPage config={boardConfig} />} />
+            <Route path="filiacoes" element={<FiliacoesPage />} />
           </Route>
         </Route>
       </Routes>

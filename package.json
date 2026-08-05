@@ -21,6 +21,7 @@
     "dayjs": "^1.11.21",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.42.2",
+    "jspdf": "^4.2.1",
     "lucide-react": "^1.26.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
