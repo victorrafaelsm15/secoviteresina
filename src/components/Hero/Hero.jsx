@@ -22,7 +22,7 @@ export default function Hero() {
           </h1>
           <p className={styles.subtitle}>
             Defendemos os interesses da categoria com atuação jurídica sólida, benefícios
-            exclusivos e compromisso permanente com a valorização profissional em todo o Piauí.
+            exclusivos e compromisso permanente com a valorização do mercado condominial em todo o Piauí.
           </p>
           <div className={styles.actionsRow}>
             <Button

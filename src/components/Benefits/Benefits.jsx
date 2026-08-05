@@ -14,7 +14,7 @@ export default function Benefits() {
           <h2 className={styles.title}>Benefícios para quem é associado</h2>
           <p className={styles.subtitle}>
             Ser associado significa contar com uma estrutura completa de suporte, economia e
-            representação — pensada para valorizar sua atuação profissional.
+            representação — pensada para valorizar o mercado condominial.
           </p>
           <Button component={Link} to="/filiacao" size="md" radius="xl" color="gold.6" c="navy.9" fw={700}>
             Associe-se agora

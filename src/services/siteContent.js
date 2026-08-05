@@ -37,7 +37,7 @@ export const quickAccess = [
 export const aboutContent = {
   eyebrow: 'Quem somos',
   title: 'Representação institucional para os condomínios do Piauí',
-  text: `O ${siteInfo.name} (${siteInfo.legalAbbreviation}) atua na defesa dos interesses da categoria em todo o Estado do Piauí, promovendo representação institucional, segurança jurídica e valorização profissional para condomínios residenciais, comerciais, mistos, verticais e horizontais, além de shopping centers.`,
+  text: `O ${siteInfo.name} (${siteInfo.legalAbbreviation}) atua na defesa dos interesses da categoria em todo o Estado do Piauí, promovendo representação institucional, segurança jurídica e valorização patrimonial para condomínios residenciais, comerciais, mistos, verticais e horizontais, além de shopping centers.`,
 };
 
 // Conteúdo institucional extraído da Circular nº 001/2026.
@@ -96,7 +96,7 @@ export const services = [
 export const benefits = [
   { title: 'Convênios em Saúde', description: 'Condições especiais em planos de saúde e odontológicos.', icon: 'HeartPulse' },
   { title: 'Descontos Educacionais', description: 'Parcerias com instituições de ensino e cursos.', icon: 'BookOpen' },
-  { title: 'Assessoria Jurídica Gratuita', description: 'Atendimento jurídico incluso para associados.', icon: 'Scale' },
+  { title: 'Orientação Jurídica', description: 'Atendimento jurídico incluso para associados.', icon: 'Scale' },
   { title: 'Eventos Exclusivos', description: 'Acesso prioritário a eventos e capacitações.', icon: 'Sparkles' },
 ];
 
@@ -126,11 +126,8 @@ export const associateRights = [
   'Utilizar as dependências do Sindicato',
   'Votar e ser votado nas eleições sindicais',
   'Participar das Assembleias Gerais',
-  'Gozar dos benefícios e da assistência do Sindicato, incluindo assistência judiciária',
-  'Requerer a convocação de Assembleia Geral Extraordinária, com o apoio de 10% dos associados',
   'Participar de eventos e promoções realizados pelo Sindicato',
   'Desligar-se do quadro associativo a qualquer momento, sem ônus',
-  'Não responder solidária ou subsidiariamente pelas obrigações do Sindicato',
 ];
 
 export const associateDuties = [
