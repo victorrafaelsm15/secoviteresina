@@ -1,4 +1,4 @@
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import { Button, TextInput, Select, SimpleGrid } from '@mantine/core';
 import { notifications } from '@mantine/notifications';
 import { CheckCircle2 } from 'lucide-react';
@@ -16,7 +16,9 @@ const REASONS = [
 ];
 
 export default function FiliacaoPage() {
-  const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm();
+  const {
+    register, control, handleSubmit, formState: { errors, isSubmitting }, reset,
+  } = useForm();
 
   const onSubmit = async (values) => {
     try {
@@ -93,11 +95,17 @@ export default function FiliacaoPage() {
             <SimpleGrid cols={{ base: 1, sm: 2 }} mt="md">
               <TextInput label="Telefone" {...register('phone')} />
             </SimpleGrid>
-            <Select
-              label="Categoria"
-              mt="md"
-              data={['Condomínio', 'Shopping Center']}
-              {...register('category')}
+            <Controller
+              name="category"
+              control={control}
+              render={({ field }) => (
+                <Select
+                  label="Categoria"
+                  mt="md"
+                  data={['Condomínio', 'Shopping Center']}
+                  {...field}
+                />
+              )}
             />
             <Button type="submit" mt="lg" fullWidth size="md" radius="xl" color="gold.6" c="navy.9" fw={700} loading={isSubmitting}>
               Enviar solicitação
